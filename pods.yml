@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: first-app
+  labels:
+    app: pystritch
+spec:
+  containers:
+    - name: pystritch
+      image: omkarkhare/pystritch:9
+      ports:
+        - containerPort: 8080
