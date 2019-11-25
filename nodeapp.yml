@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: firstapp
+  name: first-app
   labels:
     app: nodeapp1
 spec:
