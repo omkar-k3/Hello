@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
     - name: pystritch
-      image: omkarkhare/pystritch:9
+      image: omkarkhare/pystritch:13
       ports:
         - containerPort: 8080
