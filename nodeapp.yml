@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: first-app
+  name: first-python
   labels:
-    app: nodeapp1
+    app: pythonapp1
 spec:
   containers:
-    - name: nodeapp1
-      image: kammana/nodeapp:v1
+    - name: pythonapp1
+      image: omkarkhare/python:Node1
       ports:
         - containerPort: 8080
