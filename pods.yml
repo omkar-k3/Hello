@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: python-container
-          image: omkarkhare/pystritch:21
+          image: omkarkhare/pystritch:Python1
           ports:
           - containerPort: 82
