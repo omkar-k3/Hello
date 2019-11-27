@@ -7,14 +7,14 @@ metadata:
 spec:
   replicas: 2
   selector:
-    matchlabels:
+    matchLabels:
       app: python-app
   template:
     metadata:
       labels:
         app: python-app
     spec:
-      container:
+      containers:
         - name: python-container
           image: omkarkhare/pystritch:21
           ports:
