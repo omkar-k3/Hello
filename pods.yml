@@ -1,12 +1,21 @@
-apiVersion: v1
-kind: Pod
+apiVersion: extensions/v1beta1
+kind: deployment
 metadata:
-  name: firstapp
+  name: python-deployment
   labels:
-    app: pystritch
+    app: python-app
 spec:
-  containers:
-    - name: pystritch
-      image: omkarkhare/pystritch:13
-      ports:
-        - containerPort: 8080
+  replicas: 2
+  selector:
+    matchlabels:
+      app: python-app
+  template:
+    metadata:
+      labels:
+        app: python-app
+    spec:
+      container:
+        - name: python-container
+          image: omkarkhare/pystritch:21
+          ports:
+          - containerPort: 82
