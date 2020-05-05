@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"terra-vpc","Source":"./modules/aws-vpc","Dir":"modules/aws-vpc"},{"Key":"","Source":"","Dir":"."},{"Key":"terra-rds","Source":"./modules/aws-rds","Dir":"modules/aws-rds"},{"Key":"terra-rds.terra-vpc","Source":"./modules/aws-vpc","Dir":""}]}
