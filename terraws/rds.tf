@@ -12,7 +12,7 @@ locals {
 
 
 resource "aws_secretsmanager_secret" "terrasecret" {
-  name = "terrasecret"
+  name = "terrasecret1"
 }
 
 resource "aws_secretsmanager_secret_version" "terrasecversion" {
