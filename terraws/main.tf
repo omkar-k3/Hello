@@ -243,9 +243,14 @@ resource "aws_network_acl" "terranacl" {
     }
 }
 
+resource "tls_private_key" "terratls" {
+  algorithm = "RSA"
+  rsa_bits  = 4096
+}
+
 resource "aws_key_pair" "terrakey" {
     key_name = "${local.key_name}"
-    public_key = "${file("/home/user/.ssh/terraf.key.pub")}"
+    public_key = "${tls_private_key.terratls.public_key_openssh}"
 }
 
 resource "aws_instance" "terrainstance" {
