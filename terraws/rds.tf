@@ -40,4 +40,4 @@ resource "aws_secretsmanager_secret_version" "terrasecversion" {
     #vpc_security_group_ids = ["${aws_security_group.terrasg.id}"]
     #skip_final_snapshot = "true"
     #final_snapshot_identifier = "${local.db_snapshot}"
-}
+#}
