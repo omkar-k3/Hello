@@ -15,7 +15,7 @@ variable httpcidr_block {
 
 variable sshcidr_block {
     type = "list"
-    default = [ "61.0.210.182/32"]
+    default = [ "117.195.18.164/32"]
 }
 
 variable "instance_count" {

@@ -194,7 +194,7 @@ resource "aws_network_acl" "terranacl" {
         to_port = 22
         rule_no = 100
         action = "allow"
-        cidr_block = "61.0.210.182/32"
+        cidr_block = "117.195.18.164/32"
     }
     ingress {
         protocol = "tcp"
@@ -219,7 +219,7 @@ resource "aws_network_acl" "terranacl" {
         to_port = 22
         rule_no = 100
         action = "allow"
-        cidr_block = "61.0.210.182/32"
+        cidr_block = "117.195.18.164/32"
     }
     egress {
         protocol = "tcp"
