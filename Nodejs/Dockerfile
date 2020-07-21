@@ -3,8 +3,8 @@ FROM node:12
 # Create app directory
 WORKDIR /usr/src/app
 
-COPY ./package.json ./
-COPY ./package-lock.json ./ 
+COPY ./NodeCode/package.json ./
+COPY ./NodeCode/package-lock.json ./ 
 
 RUN npm install
 
@@ -13,4 +13,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD [ "node", "server.js" ]
+CMD [ "node", "./NodeCode/server.js" ]
