@@ -3,8 +3,8 @@ FROM node:12
 # Create app directory
 WORKDIR /usr/src/app
 
-COPY package.json ./
-COPY package-lock.json ./ 
+COPY ./package.json ./
+COPY ./package-lock.json ./ 
 
 RUN npm install
 
