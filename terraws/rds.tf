@@ -1,24 +1,24 @@
-resource "random_string" "terrastring" {
-  length = 8
-  special = true
-  override_special = "£$"
-}
+#resource "random_string" "terrastring" {
+ # length = 8
+  #special = true
+  #override_special = "£$"
+#}
 
 
-locals {
-  db_identifier = "${var.environment}-${var.terradb}"
-  db_snapshot = "${var.environment}-1"
-}
+#locals {
+ # db_identifier = "${var.environment}-${var.terradb}"
+  #db_snapshot = "${var.environment}-1"
+#}
 
 
-resource "aws_secretsmanager_secret" "terrasecret" {
-  name = "terrasecret2"
-}
+#resource "aws_secretsmanager_secret" "terrasecret" {
+ # name = "terrasecret2"
+#}
 
-resource "aws_secretsmanager_secret_version" "terrasecversion" {
-  secret_id = "${aws_secretsmanager_secret.terrasecret.id}"
-  secret_string = "${random_string.terrastring.result}"
-}
+#resource "aws_secretsmanager_secret_version" "terrasecversion" {
+ # secret_id = "${aws_secretsmanager_secret.terrasecret.id}"
+  #secret_string = "${random_string.terrastring.result}"
+#}
 
 #resource "aws_db_instance" "terradb" {
  #   depends_on = [ aws_db_subnet_group.terrasubgr, aws_security_group.terrasg ]

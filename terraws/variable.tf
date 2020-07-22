@@ -15,7 +15,7 @@ variable httpcidr_block {
 
 variable sshcidr_block {
     type = "list"
-    default = [ "117.195.18.164/32"]
+    default = [ "117.202.200.237/32"]
 }
 
 variable "instance_count" {
@@ -23,7 +23,7 @@ variable "instance_count" {
 }
 
 variable "instance_ami" {
-    default = "ami-0fc61db8544a617ed"
+    default = "ami-08f3d892de259504d"
 }
 
 variable "aws_region" {

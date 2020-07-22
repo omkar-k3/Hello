@@ -18,7 +18,7 @@ output "vpcsecurity" {
     description = "vpc security group id"
 }
 
-output "passres" {
-   value = "${random_string.terrastring.result}"
-   description = "database password to use"
-}
+#output "passres" {
+ #  value = "${random_string.terrastring.result}"
+  # description = "database password to use"
+#}
