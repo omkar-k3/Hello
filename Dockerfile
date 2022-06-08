@@ -6,3 +6,5 @@ RUN pip install pystrich
 
 CMD [ "python", "./my_script.py" ]
 
+EXPOSE 8000
+
