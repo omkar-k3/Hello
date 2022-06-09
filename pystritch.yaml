@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-stritch
+  labels:
+    app: test-stritch
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-stritch
+  template:
+    metadata:
+      labels:
+        app: test-stritch
+    spec:
+      containers:
+      - name: test-stritch
+        image: 064178608086.dkr.ecr.ap-south-1.amazonaws.com/pipelinetest:13
+        ports:
+        - containerPort: 8080
