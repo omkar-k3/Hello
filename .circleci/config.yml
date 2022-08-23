@@ -9,4 +9,5 @@ jobs:
           command: |
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
-            apk add --no-cache bash curl
+            apk add --no-cache bash curl python3 py3-pip && pip3 install awscli
+            
