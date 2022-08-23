@@ -11,4 +11,6 @@ jobs:
             echo 'This is the delivery pipeline'
             apk add --no-cache bash curl python3 py3-pip && pip3 install awscli
             aws --version
+            aws sts assume-role --role-arn "arn:aws:iam::064178608086:role/Ansible-test-role" --role-session-name testSession
+            aws s3 ls
             
