@@ -14,4 +14,6 @@ jobs:
             aws --version
             aws configure set role_arn "arn:aws:iam::064178608086:role/Ansible-test-role"
             cat ~/.aws/config
+            aws sts assume-role --role-arn arn:aws:iam::064178608086:role/Ansible-test-role
+            aws s3 ls
             
