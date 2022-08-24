@@ -8,10 +8,7 @@ jobs:
       - checkout
       - aws-cli/setup:
           aws-region: AWS_REGION_NAME
-      - aws-cli/role-arn-setup:
-          profile-name: new-profile
-          role-arn: 'arn:aws:iam::064178608086:role/Ansible-test-role'
-          source-profile: default
+          aws-access-key-id: AWS_ACCESS_KEY_ID
       - run:
           command: |
             aws sts assume-role --role-arn "arn:aws:iam::064178608086:role/Ansible-test-role" --role-session-name AWSCLI-Session
