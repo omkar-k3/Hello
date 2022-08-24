@@ -13,5 +13,5 @@ jobs:
             apk add --no-cache sudo
             aws --version
             aws configure set role_arn "arn:aws:iam::064178608086:role/Ansible-test-role"
-            ls ~/.aws/
+            cat ~/.aws/config
             
