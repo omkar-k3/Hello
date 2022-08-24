@@ -6,6 +6,8 @@ jobs:
     executor: aws-cli/default
     steps:
       - checkout
+      - aws-cli/setup:
+          aws-region: ap-south-1
       - aws-cli/role-arn-setup:
           profile-name: new-profile
           role-arn: 'arn:aws:iam::064178608086:role/Ansible-test-role'
