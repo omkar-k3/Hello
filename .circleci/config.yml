@@ -2,7 +2,7 @@ version: '2.1'
 orbs:
   aws-cli: circleci/aws-cli@3.1
 jobs:
-  configure-role-arn:
+  cli-commands:
     executor: aws-cli/default
     steps:
       - checkout
@@ -11,8 +11,8 @@ jobs:
           aws-access-key-id: AWS_ACCESS_KEY_ID
       - run:
           command: |
-            aws sts assume-role --role-arn "arn:aws:iam::064178608086:role/Ansible-test-role" --role-session-name AWSCLI-Session
+            aws s3 ls
 workflows:
   aws-cli:
     jobs:
-      - configure-role-arn
+      - cli-commands
