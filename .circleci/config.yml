@@ -11,8 +11,8 @@ jobs:
             echo 'This is the delivery pipeline'
             apk add --no-cache bash curl python3 py3-pip && pip3 install awscli
             apk add --no-cache sudo
+            apk add --no-cache whereis
             aws --version
             aws configure set role_arn "arn:aws:iam::064178608086:role/Ansible-test-role"
-            aws configure set source_profile default
-            aws s3 ls
+            ls ~/.aws/
             
