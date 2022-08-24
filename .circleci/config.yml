@@ -12,6 +12,7 @@ jobs:
             apk add --no-cache bash curl python3 py3-pip && pip3 install awscli
             apk add --no-cache sudo
             aws --version
-            aws configure set credential_source "arn:aws:iam::064178608086:role/Ansible-test-role" --profile testprofile
+            aws configure set role_arn "arn:aws:iam::064178608086:role/Ansible-test-role" --profile testprofile
             aws configure set source_profile testprofile --profile testprofile
+            aws s3 ls --profile testprofile
             
