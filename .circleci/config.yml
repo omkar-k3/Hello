@@ -13,6 +13,6 @@ jobs:
             apk add --no-cache sudo
             aws --version
             aws configure set role_arn "arn:aws:iam::064178608086:role/Ansible-test-role"
-            aws configure set source_profile testprofile
+            aws configure set source_profile default
             aws s3 ls
             
