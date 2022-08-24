@@ -14,5 +14,4 @@ jobs:
             aws --version
             aws configure set credential_source "arn:aws:iam::064178608086:role/Ansible-test-role" --profile testprofile
             aws configure set source_profile testprofile --profile testprofile
-            sudo cat ~/.aws/credentials
             
