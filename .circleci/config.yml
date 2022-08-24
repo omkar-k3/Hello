@@ -14,7 +14,7 @@ jobs:
           source-profile: default
       - run: >-
           aws sts assume-role --role-arn
-          "arn:aws:iam::064178608086:role/Ansible-test-rol" --role-session-name
+          "arn:aws:iam::064178608086:role/Ansible-test-role" --role-session-name
           AWSCLI-Session
 workflows:
   aws-cli:
