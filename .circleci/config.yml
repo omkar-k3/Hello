@@ -1,0 +1,22 @@
+version: '2.1'
+orbs:
+  aws-cli: circleci/aws-cli@3.1
+jobs:
+  configure-role-arn:
+    executor: aws-cli/default
+    steps:
+      - checkout
+      - aws-cli/setup:
+          profile-name: default
+      - aws-cli/role-arn-setup:
+          profile-name: new-profile
+          role-arn: 'arn:aws:iam::064178608086:role/Ansible-test-role'
+          source-profile: default
+      - run: >-
+          aws sts assume-role --role-arn
+          "arn:aws:iam::064178608086:role/Ansible-test-rol" --role-session-name
+          AWSCLI-Session
+workflows:
+  aws-cli:
+    jobs:
+      - configure-role-arn
