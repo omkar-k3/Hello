@@ -5,4 +5,8 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "3a:3d:a7:5b:4f:83:2e:70:51:3a:6b:fd:7e:22:f6:7b"
+            
+workflows:
+    jobs:
+      - testjob
 
