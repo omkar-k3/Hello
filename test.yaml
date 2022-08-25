@@ -1,0 +1,10 @@
+---
+
+  - name: Playbook
+    hosts: all
+    become: yes
+    tasks:
+      - name: create a sample test file
+        file:
+          path: /var/tmp/test.txt
+          state: touch
